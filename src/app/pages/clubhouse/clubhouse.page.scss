@@ -1,0 +1,18 @@
+ion-header::after {
+    background-image: none;
+}
+
+.header {
+    margin-left: 1em;
+    // margin-top: 1em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.container {
+    margin-top: 3em;
+    margin-left: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-bottom: 1em;
+}

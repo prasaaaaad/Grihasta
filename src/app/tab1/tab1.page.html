@@ -1,0 +1,54 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Grihasta
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-content [fullscreen]="true">
+  <h1 class="header">Home</h1>
+
+  <div class="container">
+
+    <!-- Food order card -->
+    <ion-card>
+      <ion-item>
+        <ion-icon name="fast-food" slot="start"></ion-icon>
+        <ion-label>Burger King Order</ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Your order is in the kitchen.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Maintenance pending card -->
+    <ion-card>
+      <ion-item>
+        <ion-icon name="cash" slot="start"></ion-icon>
+        <ion-label>Maintenance due!</ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Your maintenance is due for ₹8000.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Maintenance pending card -->
+    <ion-card>
+      <ion-item>
+        <ion-icon name="barbell" slot="start"></ion-icon>
+        <ion-label>Membership due!</ion-label>
+        <ion-button fill="outline" slot="end">View</ion-button>
+      </ion-item>
+      <ion-card-content>
+        Your membership is due for ₹3000.
+      </ion-card-content>
+    </ion-card>
+
+    <!-- Society map with hotspots -->
+    <ion-img [src]="'assets/img/map.png'"> </ion-img>
+
+  </div>
+</ion-content>

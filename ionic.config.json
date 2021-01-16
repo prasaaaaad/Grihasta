@@ -1,0 +1,7 @@
+{
+  "name": "Grihasta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

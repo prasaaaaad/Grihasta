@@ -1,0 +1,161 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngSwitch]="passType">
+  <h1 class="header">Visitor Pass</h1>
+
+  <ion-item class="pass-type">
+    <ion-label>Pass type:</ion-label>
+    <ion-select value="single" interface="action-sheet" placeholder="Select One">
+      <ion-select-option value="single">Single day</ion-select-option>
+      <ion-select-option value="weekly">Weekly</ion-select-option>
+      <ion-select-option value="monthly">Monthly</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <!-- Single day pass -->
+  <div *ngSwitchCase="'single'">
+    <form class="visitorForm">
+
+      <ion-item lines="full">
+        <ion-label>Date</ion-label>
+        <ion-datetime min="{{ currentDate }}" displayFormat="D MMMM, YYYY" value="{{ currentDate }}"
+          placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">First name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Last name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Additional members</ion-label>
+        <ion-input inputmode="numeric" type="number" min="0" max="1000" maxlength="4" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Mobile number</ion-label>
+        <ion-input inputmode="tel" type="tel" pattern="tel" maxlength="10" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="3" placeholder="Reason for visit"></ion-textarea>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button fill="outline" expand="block" class="submit" type="submit" color="primary">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+
+  <!-- Weekly pass -->
+  <div *ngSwitchCase="'weekly'">
+    <!-- <h1 class="header">Visitor Pass</h1> -->
+    <form class="visitorForm">
+
+      <ion-item lines="full">
+        <ion-label>Start date</ion-label>
+        <ion-datetime min="{{ currentDate }}" displayFormat="D MMMM, YYYY" value="{{ currentDate }}"
+          placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>End date</ion-label>
+        <ion-datetime min="{{ currentDate }}" displayFormat="D MMMM, YYYY" value="{{ currentDate }}"
+          placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">First name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Last name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Additional members</ion-label>
+        <ion-input inputmode="numeric" type="number" min="0" max="1000" maxlength="4" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Mobile number</ion-label>
+        <ion-input inputmode="tel" type="tel" pattern="tel" maxlength="10" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="3" placeholder="Reason for visit"></ion-textarea>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button fill="outline" expand="block" class="submit" type="submit" color="primary">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+
+  <!-- Monthly pass -->
+  <div *ngSwitchCase="'monthly'">
+    <!-- <h1 class="header">Visitor Pass</h1> -->
+    <form class="visitorForm">
+
+      <ion-item lines="full">
+        <ion-label>Start month</ion-label>
+        <ion-datetime min="{{ currentDate }}" displayFormat="MMMM, YYYY" value="{{ currentDate }}"
+          placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label>End month</ion-label>
+        <ion-datetime min="{{ currentDate }}" displayFormat="MMMM, YYYY" value="{{ currentDate }}"
+          placeholder="Select Date"></ion-datetime>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">First name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Last name</ion-label>
+        <ion-input type="text" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Additional members</ion-label>
+        <ion-input inputmode="numeric" type="number" min="0" max="1000" maxlength="4" required></ion-input>
+      </ion-item>
+
+      <ion-item lines="full">
+        <ion-label position="floating">Mobile number</ion-label>
+        <ion-input inputmode="tel" type="tel" pattern="tel" maxlength="10" required></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-textarea rows="3" placeholder="Reason for visit"></ion-textarea>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-button fill="outline" expand="block" class="submit" type="submit" color="primary">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+
+</ion-content>

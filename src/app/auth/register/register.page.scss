@@ -1,0 +1,26 @@
+ion-header::after {
+    background-image: none;
+}
+
+.header {
+    margin-left: 1em;
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.container {
+    margin: 2em 1em 0 1em;
+    padding: 0 1em;
+}
+
+.regForm {
+    margin-bottom: 2em;
+}
+
+ion-item {
+    margin-bottom: 10px;
+}
+
+.submit {
+    margin-top: 1.5em;
+}

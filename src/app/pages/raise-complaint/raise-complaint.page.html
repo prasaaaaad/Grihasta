@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+    <!-- <ion-title>raise-complaint</ion-title> -->
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1 class="header">Complaint</h1>
+
+  <div class="container">
+    <form class="complaintForm">
+      <p>Please mention the issue faced by you in details below:</p>
+
+      <ion-item>
+        <ion-textarea rows="8" placeholder="Describe your issue here" required></ion-textarea>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <p id="add-photos"><a (click)="onAddPhotosClick()">Add photos</a></p>
+        </ion-col>
+      </ion-row>
+
+      <ion-grid>
+        <ion-row>
+          <ion-col size="6" *ngFor="let photo of photoService.photos; index as position">
+            <ion-img [src]="photo.webviewPath" (click)="onPhotoClick(photo, position)"></ion-img>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+
+      <ion-row>
+        <ion-col>
+          <ion-button fill="outline" expand="block" class="submit" type="submit" color="primary">Submit</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+  </div>
+
+</ion-content>

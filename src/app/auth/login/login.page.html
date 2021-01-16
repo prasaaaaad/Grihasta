@@ -1,0 +1,27 @@
+<ion-content>
+  <h1>Log In</h1>
+  <form #form="ngForm" class="loginForm" (ngSubmit)="login(form)">
+    <ion-item lines="full">
+      <ion-input name="id" type="text" placeholder="Mobile or Email Address" ngModel required>
+      </ion-input>
+    </ion-item>
+
+    <ion-item lines="full">
+      <ion-input name="password" type="password" placeholder="Password" ngModel required></ion-input>
+    </ion-item>
+
+    <ion-row>
+      <ion-col>
+        <ion-button [disabled]="form.invalid" fill="outline" expand="block" class="submit" type="submit"
+          color="primary">Continue</ion-button>
+      </ion-col>
+    </ion-row>
+
+    <ion-row>
+      <ion-col>
+        <p>Not a member? <a [routerLink]="['/register']">Signup.</a></p>
+      </ion-col>
+    </ion-row>
+  </form>
+
+</ion-content>

@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/tab2"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [ngSwitch]="pageType">
+
+  <!-- Live darshan page -->
+  <div *ngSwitchCase="'LiveDarshan'">
+    <h1 class="header">Live Darshan</h1>
+
+    <div class="container">
+      <iframe height="320" src="https://www.youtube.com/embed/ZsvQ_Bi2Fq0" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope;" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <!-- Digital Aarti page -->
+  <div *ngSwitchCase="'DigitalAarti'">
+    <h1 class="header">Digital Aarti</h1>
+
+    <div class="container">
+    </div>
+  </div>
+
+  <!-- Online dakshina page -->
+  <div *ngSwitchCase="'Dakshina'">
+    <h1 class="header">Dakshina</h1>
+
+    <div class="container">
+    </div>
+  </div>
+
+</ion-content>
